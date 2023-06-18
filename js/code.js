@@ -1,50 +1,52 @@
-// Let computer to select Rock, Paper, and Scissors randomly.
-
 function getComputerChoice() {
-    return Math.floor(Math.random() * 3 ) + 1;
-}
+    let computerSelectArray = ["ROCK", "PAPER", "SCISSORS"];
+    const computerSelection = (computerSelectArray[(Math.floor(Math.random() * computerSelectArray.length))]);   
+    console.log("The computer choice is " + computerSelection);
 
-// Get player input value.
-const playserSelectionString = prompt("Please enter either Rock, Paper, or Scissors (case-insensitive)", ).toUpperCase();
-
-// ROCK = 1
-// PAPER = 2
-// SCISSORS = 3
-
-// Convert user input string to number
-
-function playserSelectionStringtoNumber() {
-    let playserSelection;
-    if (playserSelectionString == "ROCK") {
-        playserSelection = 1;
-    }else if (playserSelectionString == "PAPER") {
-        playserSelection = 2;
-    }else {playserSelection = 3}
-    return playserSelection;
-}
-
-// Compare the computer select value and user input value.
-
-function playRound(playserSelection, computerSelection) {
-    let result;
-    if (playserSelection == 3 && computerSelection == 1) {
-        result = "You Lose! Rock beats Scissors";
-    }else if (playserSelection == 1 && computerSelection == 3) {
-        result = "You Win! Rock beats Scissors";
-    }else if (playserSelection > computerSelection) {
-        result = "You Win!";
-    }else if (playserSelection < computerSelection) {
-        result = "You Loose!";
-    }else {result = "Draw!"
+    let computerNumber;
+    if (computerSelection == "ROCK") {
+        computerNumber = 1;
+    }else if (computerSelection == "PAPER") {
+        computerNumber = 2;
+    }else {computerNumber = 3}
+    return computerNumber;
     }
-    return result;
+ 
+
+function getPlayerChoice() {
+    const plyaserInput = prompt("Please enter either Rock, Paper, or Scissors (case-insensitive)", )
+    const plyaserInputUpper = plyaserInput.toUpperCase();
+    console.log("Your choice is " + plyaserInput);
+
+    let playerNumber;
+    if (plyaserInputUpper == "ROCK") {
+        playerNumber = 1;
+    }else if (plyaserInputUpper == "PAPER") {
+        playerNumber = 2;
+    }else {playerNumber = 3}
+    return playerNumber;
 }
 
-const playserSelection = playserSelectionStringtoNumber();
-console.log(playserSelectionStringtoNumber());
+function playRound(playerSelectionNumber , computerSelectionNumber) {
+    let Score = 0;
+    if (playerSelectionNumber  == 3 && computerSelectionNumber == 1) { 
+        console.log("You Lose! Rock beats Scissors");
+        Score -= 1;
+    }else if (playerSelectionNumber  == 1 && computerSelectionNumber == 3) {
+        console.log("You Win! Rock beats Scissors");
+        Score += 1;
+    }else if (playerSelectionNumber  > computerSelectionNumber) {
+        console.log("You Win!" );
+        Score += 1;
+    }else if (playerSelectionNumber  < computerSelectionNumber) {
+        console.log("You Loose!");
+        Score -= 1;
+    }else {
+        console.log("Draw!");
+    }
+    return Score;
+}
 
-const computerSelection = getComputerChoice();
-console.log(computerSelection);
+let sumScore = playRound(getPlayerChoice() , getComputerChoice())
 
-console.log(playRound(playserSelection, computerSelection));
-
+console.log(sumScore)
