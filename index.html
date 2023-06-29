@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./js/script.js" defer></script>      
 </head>
+   
 <body>
-    <script src="./js/script.js"></script>
-    
+    <!-- Header Section -->
+    <div class="header">
+        <div class="header-text">ROCK PAPER SCISSORS</div>
+        <div class="header-text">剪刀 石頭 布</div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <div id="result"></div>
+        <div class="score">            
+            <div class="player">
+                <div>Player Score:</div> 
+                <div id="playerScore">0</div>
+            </div>
+            <div class="computer">
+                <div>Computer Score:</div>
+                <div id="computerScore">0</div>
+            </div>
+        </div>
+        <div class="rps">
+            <button id="Rock" class="button">ROCK</button>
+            <button id="Paper" class="button">PAPER</button>
+            <button id="Scissors" class="button">SCISSORS</button>
+        </div>
+        
+    </div> 
 </body>
 </html>

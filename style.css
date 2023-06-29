@@ -1,0 +1,66 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    flex-grow: 1;
+    background-color: #7A7A7A;
+}
+
+.header-text{
+    font-size: 70px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 150px;
+    flex-grow: 6;
+    background-color: #3D3D3D;
+}
+
+#result {
+    display: flex;
+    padding-top: 100px;
+    font-size: 50px;
+    min-height: 100px;
+    color: antiquewhite;
+}
+
+.score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    gap: 150px;
+    color: antiquewhite;
+}
+
+.player,
+.computer {
+    display: flex;
+    gap: 20px;
+}
+
+.rps{
+    display: flex;
+    gap: 100px;
+}
+
+.button {
+    padding: 100px;
+    font-size: 60px;
+    font-weight: 900;
+    border-radius: 10px;
+}
