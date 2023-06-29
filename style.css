@@ -23,7 +23,7 @@ body {
 .content {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: start;
     align-items: center;
     gap: 150px;
     flex-grow: 6;
